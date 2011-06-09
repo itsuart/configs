@@ -1,0 +1,19 @@
+:syntax on
+set gcr=a:blinkon0
+set tabstop=4
+filetype plugin indent on
+set go-=T
+set go-=m
+set ruler
+"set bg=dark
+set gfn=Menlo:h10
+colorscheme zenburn
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+set number
+set cursorline
+" automatically leave insert mode after 'updatetime' milliseconds of inaction
+au CursorHoldI * stopinsert
+:inoremap <CR> <Esc>
+
