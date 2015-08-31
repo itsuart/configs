@@ -1,0 +1,1 @@
+@SET PATH=C:\tools\msys\bin;%PATH%

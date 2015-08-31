@@ -1,17 +1,19 @@
-(load "~/Dropbox/emacs-libs/haskell-mode/haskell-site-file")
+(load "~/../../Dropbox/emacs-libs/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 
-(add-to-list 'load-path "~/Dropbox/emacs-libs")
+(add-to-list 'load-path "~/../../Dropbox/emacs-libs")
 
-(add-to-list 'custom-theme-load-path "~/Dropbox/emacs-libs/color-themes")
+(add-to-list 'custom-theme-load-path "~/../../Dropbox/emacs-libs/color-themes")
+;(load-theme 'zenburn t)
+
 ;(load-theme 'spacegray t)
 ;(load-theme 'zenburn t)
 
 ;(load-theme 'soft-morning t)
 ;(load-theme 'gandalf t)
 (set-face-attribute 'region nil :background "#666")
-
+(set-face-attribute 'default nil :height 110)
 (autoload 'paredit-mode "paredit" "minor mode" t)
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
 (add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode))
@@ -73,5 +75,3 @@
   (setq default-buffer-file-coding-system encoding)
   (setq default-process-coding-system (cons encoding encoding))
   (set-language-environment encoding))
-
-(set-frame-font "Droid Sans Mono-10" nil t)
