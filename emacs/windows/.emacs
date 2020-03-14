@@ -108,4 +108,4 @@
   (setq default-process-coding-system (cons encoding encoding))
   (set-language-environment encoding))
 
-(setq-default frame-title-format '("%f"))
+(setq-default frame-title-format '("%b [%f]"))
