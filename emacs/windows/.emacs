@@ -109,3 +109,8 @@
   (set-language-environment encoding))
 
 (setq-default frame-title-format '("%b [%f]"))
+
+;; Emacs will not automatically add new lines
+(setq next-line-add-newlines nil)
+(setq mode-require-final-newline nil)
+
