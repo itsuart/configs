@@ -114,3 +114,4 @@
 (setq next-line-add-newlines nil)
 (setq mode-require-final-newline nil)
 
+(global-so-long-mode 't)
