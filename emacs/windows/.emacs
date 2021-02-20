@@ -1,3 +1,5 @@
+; required to get rid of 3seconds+ hangs when symantec antivirus is running
+; (setq write-region-inhibit-fsync 1)
 (setq initial-frame-alist
       '(
         (width . 120) ; character
