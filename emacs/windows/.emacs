@@ -1,9 +1,7 @@
-; required to get rid of 3seconds+ hangs when symantec antivirus is running
-; (setq write-region-inhibit-fsync 1)
 (setq initial-frame-alist
       '(
         (width . 120) ; character
-        (height . 70) ; lines
+        (height . 60) ; lines
         ))
 
 ;(load "~/../../Dropbox/emacs-libs/haskell-mode/haskell-site-file")
@@ -15,7 +13,8 @@
 (add-to-list 'load-path "~/../../emacs-libs")
 (add-to-list 'load-path "~/../../emacs-libs/color-themes")
 (add-to-list 'custom-theme-load-path "~/../../emacs-libs/color-themes")
-(load-theme 'eziam-light t)
+;(load-theme 'eziam-light t)
+(load-theme 'base16-eighties t)
 ;(load-theme 'zenburn t)
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
@@ -27,27 +26,26 @@
 (global-set-key "\C-ca" 'org-agenda)
 
 
-;(load-theme 'spacegray t)
-;(load-theme 'zenburn t)
+(require 'modern-cpp-font-lock)
+(modern-c++-font-lock-global-mode t)
 
-;(load-theme 'soft-morning t)
-;(load-theme 'gandalf t)
-;(set-face-attribute 'region nil :background "#666")
 ;(set-face-attribute 'default nil :font "CMU Typewriter Text-12")
 ;(set-face-attribute 'default nil :font "Consolas-10")
-(set-face-attribute 'default nil :font "Hack-10")
-;(set-face-attribute 'default nil :font "Fira Code Retina-10")
+(set-face-attribute 'default nil :font "Source Code Pro-11")
+
 ;(set-face-attribute 'default nil :height 110)
 (autoload 'paredit-mode "paredit" "minor mode" t)
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
-;(autoload 'rust-mode "rust-mode" nil t)
+
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
 
 (add-to-list 'auto-mode-alist '("\\.cs$" . csharp-mode))
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 (add-to-list 'auto-mode-alist '("\\.c99$" . cc-mode))
 (add-to-list 'auto-mode-alist '("\\.spice$" . text-mode))
 (add-to-list 'auto-mode-alist '("\\.st$" . html-mode))
-;(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+
 (blink-cursor-mode 0)
 (show-paren-mode t)
 (electric-pair-mode)
@@ -115,5 +113,6 @@
 ;; Emacs will not automatically add new lines
 (setq next-line-add-newlines nil)
 (setq mode-require-final-newline nil)
-
 (global-so-long-mode 't)
+
+;(set-frame-width (selected-frame) 120)
