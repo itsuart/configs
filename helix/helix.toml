@@ -1,0 +1,9 @@
+[editor]
+line-number='relative'
+cursorline=true
+rulers=[120]
+default-line-ending='lf'
+end-of-line-diagnostics='warning'
+
+[editor.file-picker]
+hidden=false
